@@ -1,8 +1,17 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
+// Override Boostrap variables
+@import "variables";
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+// Site-specific styles
+// Add additional stylesheet
+@import "content";
+
+@import "mixins";
 
 .browsehappy {
   margin: 0.2em 0;
@@ -77,8 +86,7 @@ body {
   .header,
   .marketing,
   .footer {
-    padding-left: 0;
-    padding-right: 0;
+      @include side-padding(0,0, false);
   }
 
   /* Space out the masthead */
@@ -97,4 +105,9 @@ body {
 
 h1 {
     color: green !important;
+}
+$leftPad : 400px;
+$rightPad : 400px;
+.jumbotron {
+    @include side-padding($leftPad, $rightPad, true);
 }

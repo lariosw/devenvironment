@@ -1,0 +1,12 @@
+//created mixin to add left and right padding
+@mixin side-padding($left,$right, $setToImportant) {
+    
+    @if $setToImportant == true {
+        padding-left: $left !important;
+        padding-right: $right !important;
+    }@else {
+        padding-left: $left;
+        padding-right: $right;
+    }
+    
+}
