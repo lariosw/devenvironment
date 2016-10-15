@@ -46,7 +46,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:lariosw/devenvironment.git',
+          remote: 'https://github.com/lariosw/devenvironment.git',
           branch: 'gh-pages'
         }
       }
